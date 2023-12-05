@@ -4,10 +4,10 @@
     "slug": "NSOFT",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./app/assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./app/assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -15,16 +15,35 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nsoft1.NSOFT",
+      "config": {
+        "googleMapsApiKey": "AIzaSyBCzP4HaSa6F0oJnb6H0KrZEavR6jY8MJ8"
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./app/assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.nsoft1.NSOFT",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBCzP4HaSa6F0oJnb6H0KrZEavR6jY8MJ8"
+        }
+      },
+      "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION"]
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-localization"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "5ba32f1b-e400-422f-ad94-2f2c4b736c25"
+      }
     }
   }
 }
